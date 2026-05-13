@@ -42,4 +42,13 @@ public class Notification {
         this.createdAt = LocalDateTime.now();
         this.status = NotificationStatus.PENDING;
     }
+
+    public void markAsSent() {
+        this.status = NotificationStatus.SENT;
+        this.sentAt = LocalDateTime.now();
+    }
+
+    public void markAsFailed() {
+        this.status = NotificationStatus.FAILED;
+    }
 }
